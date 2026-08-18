@@ -24,14 +24,140 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .back{border:0;background:none;color:#bbb0c1;padding:6px 0}.sectionTitle{padding:30px 0 18px}.sectionTitle h1{font-size:48px;margin:6px 0}.sectionTitle p{color:#9f95a5}
 .timeline{display:grid;gap:13px}.memory{display:grid;grid-template-columns:48px 1fr;gap:15px;padding:22px;background:#121016;border:1px solid #2c2532;border-radius:24px}
 .memory .num{font:700 26px ui-monospace,monospace;color:#796a88}.memory small{font-family:monospace;color:#8d7e9b}.memory h2{margin:7px 0 8px}
-.memory p,.similarCard p,.traits p{line-height:1.75;color:#c4bbc8}.similarCard{padding:28px;position:relative;overflow:hidden}.bigquote{font-size:clamp(38px,10vw,70px);font-weight:800;margin-bottom:20px}.similarCard .softDivider{height:1px;margin:18px 0 22px;background:linear-gradient(90deg,transparent,rgba(181,145,220,.65),transparent);position:relative}.similarCard .softDivider:after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:0 9px;background:#121016;color:#a98ac5;font-size:12px}.similarCard .feathers{position:absolute;right:22px;bottom:14px;font-size:31px;letter-spacing:-12px;transform:rotate(-12deg);opacity:.48;filter:drop-shadow(0 0 8px rgba(175,135,220,.25));pointer-events:none}.similarCard .feathers span:last-child{display:inline-block;transform:rotate(18deg) translateY(4px)}
+.memory p,.similarCard p,.traits p{line-height:1.75;color:#c4bbc8}.similarCard{padding:26px 26px 28px;position:relative;overflow:hidden;border-color:#3a3042;background:linear-gradient(145deg,rgba(25,20,31,.96),rgba(17,14,22,.94))}.similarCard:before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 88% 8%,rgba(163,124,204,.10),transparent 34%);pointer-events:none}.sameEyebrow{position:relative;z-index:1;font:600 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;color:#927da4;margin-bottom:10px}.bigquote{position:relative;z-index:1;font-size:clamp(27px,7.2vw,42px);line-height:1.22;font-weight:760;letter-spacing:-.02em;margin:0;color:#f2edf5}.sameAccent{position:relative;z-index:1;display:flex;align-items:center;gap:8px;margin:16px 0 18px;max-width:250px}.sameAccent span{height:1px;flex:1;background:linear-gradient(90deg,rgba(167,132,202,.15),rgba(167,132,202,.55))}.sameAccent span:last-child{background:linear-gradient(90deg,rgba(167,132,202,.55),rgba(167,132,202,.15))}.sameAccent i{font-style:normal;font-size:10px;color:#a98ac5;text-shadow:0 0 10px rgba(169,138,197,.45)}.similarCard p{position:relative;z-index:1;margin:0}.similarCard p+p{margin-top:14px;padding-top:14px;border-top:1px solid rgba(137,111,158,.16)}.sameGlow{position:absolute;width:130px;height:130px;right:-50px;bottom:-58px;border-radius:50%;background:radial-gradient(circle,rgba(151,112,192,.13),transparent 68%);pointer-events:none}.mobileBreak{display:none}
 .traits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.traits article{padding:20px;border-radius:22px;background:#121016;border:1px solid #2c2532}
 .traits b{font-size:20px}.quiz{padding:25px}.quiz h2{font-size:27px;line-height:1.45}.quiz #answers{display:grid;gap:10px}
 .answer{border:1px solid #39303f;border-radius:17px;padding:15px;background:#17121c;color:#fff;text-align:left}.answer.ok{border-color:#72cb87}.answer.ng{border-color:#d86e7b}
 .quiz #feedback{min-height:30px;padding-top:13px;color:#b7acbb}.letter{padding:30px}.letter p{line-height:2;font-size:17px;color:#e1d9e4}
 .sign{text-align:right!important;font-weight:700;margin-top:30px}.finalBtn{display:block;margin:22px auto}.ending{text-align:center;padding:45px 10px 80px}
 .heart{font-size:70px}.ending h2{font-size:35px;margin:5px}.ending p{color:#b9aebe}.ending small{color:#6f6575}.sub{padding-top:16px}
-@media(max-width:560px){.screen{padding:16px}.hero{height:450px}.heroText{left:20px;right:20px;bottom:22px}.apps,.traits{grid-template-columns:1fr}.app{min-height:120px}.memory{grid-template-columns:38px 1fr}.letter{padding:22px}.sectionTitle h1{font-size:40px}}
+@media(max-width:560px){.mobileBreak{display:block}.similarCard{padding:24px 22px 25px}.bigquote{font-size:clamp(29px,8.5vw,38px)}.screen{padding:16px}.hero{height:450px}.heroText{left:20px;right:20px;bottom:22px}.apps,.traits{grid-template-columns:1fr}.app{min-height:120px}.memory{grid-template-columns:38px 1fr}.letter{padding:22px}.sectionTitle h1{font-size:40px}}
+
+/* --- shared-things card: refined to blend with the other cards --- */
+#similar .similarCard{
+  margin-top:18px;
+  padding:24px 22px 25px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid #312939;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 92% 8%,rgba(155,120,190,.08),transparent 27%),
+    #121016;
+  box-shadow:none;
+}
+#similar .similarCard::before{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  top:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(166,132,201,.52),transparent);
+}
+#similar .sameTop{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+#similar .sameLabel{
+  font:600 9px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.17em;
+  color:#8f7c9f;
+}
+#similar .sameSpark{
+  font-size:11px;
+  color:#a78bc0;
+  opacity:.78;
+  text-shadow:0 0 10px rgba(167,139,192,.38);
+}
+#similar .sameTitle{
+  position:relative;
+  z-index:1;
+  margin:0;
+  font-size:clamp(23px,6.2vw,31px);
+  line-height:1.34;
+  letter-spacing:-.025em;
+  font-weight:720;
+  color:#f2eef4;
+}
+#similar .sameTitle span{
+  display:block;
+}
+#similar .sameTitle span + span{
+  margin-top:1px;
+}
+#similar .sameRule{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  width:min(240px,72%);
+  margin:15px 0 18px;
+}
+#similar .sameRule span{
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,rgba(146,119,164,.12),rgba(146,119,164,.43));
+}
+#similar .sameRule span:last-child{
+  background:linear-gradient(90deg,rgba(146,119,164,.43),rgba(146,119,164,.12));
+}
+#similar .sameRule i{
+  font-style:normal;
+  font-size:8px;
+  color:#9d82b4;
+  opacity:.85;
+}
+#similar .sameText{
+  position:relative;
+  z-index:1;
+}
+#similar .sameText p{
+  margin:0;
+  font-size:15.5px;
+  line-height:1.9;
+  color:#c5bdc9;
+}
+#similar .sameText p + p{
+  margin-top:17px;
+  padding-top:17px;
+  border-top:1px solid rgba(139,116,154,.14);
+}
+#similar .sameCorner{
+  position:absolute;
+  right:18px;
+  bottom:13px;
+  color:#8e75a2;
+  font-size:16px;
+  opacity:.23;
+  transform:rotate(10deg);
+  pointer-events:none;
+}
+@media(max-width:560px){
+  #similar .similarCard{
+    margin-top:20px;
+    padding:23px 21px 24px;
+  }
+  #similar .sameTitle{
+    font-size:25px;
+    line-height:1.36;
+  }
+  #similar .sameText p{
+    font-size:15px;
+    line-height:1.9;
+  }
+  #similar .sameRule{
+    margin-top:14px;
+    margin-bottom:17px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -67,7 +193,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 
   <div class="apps">
     <button data-go="story" class="app"><span>01</span><b>Our Story</b><small>ふたりの記録</small></button>
-    <button data-go="similar" class="app"><span>02</span><b>What I Love About Mimi</b><small>みみの好きなところ</small></button>
+    <button data-go="similar" class="app"><span>02</span><b>What I Love About Eri</b><small>えりの好きなところ</small></button>
     <button data-go="quiz" class="app"><span>03</span><b>Memory Check</b><small>秘密の解除</small></button>
     <button id="letterApp" class="app locked"><span>04</span><b>Letter</b><small id="locktxt">LOCKED</small></button>
   </div>
@@ -79,15 +205,15 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
   <header class="sectionTitle"><span class="mono">ARCHIVE 01</span><h1>Our Story</h1><p>俺がちゃんと覚えておきたいこと。</p></header>
   <div class="timeline">
     <article class="memory"><span class="num">01</span><div><small>THE BEGINNING</small><h2>曲作りから始まった</h2><p>最初のきっかけは、えりに曲の作り方を教えてもらったことだよね。あの時は、ここまで一緒にいることになるなんて思ってなかった。</p></div></article>
-    <article class="memory"><span class="num">02</span><div><small>OUR DAYS</small><h2>音楽会や、沢山過ごした日々</h2><p>音楽会をしたり、たくさん結婚式をしたり。どこへ行くにも、みみと一緒だった時間が俺にとっては特別です。</p></div></article>
+    <article class="memory"><span class="num">02</span><div><small>OUR DAYS</small><h2>音楽会や、沢山過ごした日々</h2><p>音楽会をしたり、たくさん結婚式をしたり。どこへ行くにも、えりと一緒だった時間が俺にとっては特別です。</p></div></article>
     <article class="memory"><span class="num">03</span><div><small>INCIDENT</small><h2>ホーム初期化事件</h2><p>ホームを初期化してしまった時、めっちゃ焦って不安だった。でも、えりが笑い飛ばしてくれたことに救われました。ああいう時に一緒に笑ってくれるところがすごく好きだし素敵なところと思ってます。</p></div></article>
-    <article class="memory"><span class="num">04</span><div><small>THANK YOU</small><h2>みみは俺の心の支え</h2><p>風邪をひいた時とか、俺がしんどい時に支えてくれること。そういう時に、えりが一番に俺のことを考えてくれてるのが伝わってきて、ほんとに優しいなって思います。</p></div></article>
+    <article class="memory"><span class="num">04</span><div><small>THANK YOU</small><h2>えりは俺の心の支え</h2><p>風邪をひいた時とか、俺がしんどい時に支えてくれること。そういう時に、えりが一番に俺のことを考えてくれてるのが伝わってきて、ほんとに優しいなって思います。</p></div></article>
   </div>
 </section>
 
 <section id="similar" class="screen sub">
   <button class="back">← 戻る</button>
-  <header class="sectionTitle"><span class="mono">ARCHIVE 02</span><h1>What I Love About Mimi</h1><p>みみの好きなところ。</p></header>
+  <header class="sectionTitle"><span class="mono">ARCHIVE 02</span><h1>What I Love About Eri</h1><p>えりの好きなところ。</p></header>
   <div class="traits">
     <article><b>眩しいくらい明るい</b><p>えりがいると、その場が明るくなるところや、ずっと元気なところが好き。</p></article>
     <article><b>頼りになる</b><p>しっかりしてて、頼りになるところが好き。でも普段はあほで危なっかしいところも好き。</p></article>
@@ -95,11 +221,26 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
     <article><b>いつも全力</b><p>何にでも全力なところが好き。可愛いなって思うし、見てるとこっちまで頑張ろうと思えます。</p></article>
   </div>
   <div class="similarCard card">
-    <div class="bigquote">気づいたら同じになってた部分</div>
-    <div class="softDivider"></div>
-    <p>二人とも笑う時に「むり」って付けるようになったり、言い方や反応が少しずつ似てきたり。そんなとこが一番好き。</p>
-    <p>一緒にいる時間が増えて、こういうどうでもいいところまで似てきたのが、俺はすごく幸せと感じます。</p>
-    <div class="feathers" aria-hidden="true"><span>❧</span><span>❧</span></div>
+    <div class="sameTop">
+      <span class="sameLabel">LITTLE THINGS WE SHARE</span>
+      <span class="sameSpark" aria-hidden="true">✦</span>
+    </div>
+
+    <h2 class="sameTitle">
+      <span>気づいたら</span>
+      <span>同じになってた部分</span>
+    </h2>
+
+    <div class="sameRule" aria-hidden="true">
+      <span></span><i>◇</i><span></span>
+    </div>
+
+    <div class="sameText">
+      <p>二人とも笑う時に「むり」って付けるようになったり、言い方や反応が少しずつ似てきたり。そんなとこが一番好き。</p>
+      <p>一緒にいる時間が増えて、こういうどうでもいいところまで似てきたのが、俺はすごく幸せと感じます。</p>
+    </div>
+
+    <div class="sameCorner" aria-hidden="true">✧</div>
   </div>
 </section>
 

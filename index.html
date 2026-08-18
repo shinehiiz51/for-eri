@@ -24,7 +24,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .back{border:0;background:none;color:#bbb0c1;padding:6px 0}.sectionTitle{padding:30px 0 18px}.sectionTitle h1{font-size:48px;margin:6px 0}.sectionTitle p{color:#9f95a5}
 .timeline{display:grid;gap:13px}.memory{display:grid;grid-template-columns:48px 1fr;gap:15px;padding:22px;background:#121016;border:1px solid #2c2532;border-radius:24px}
 .memory .num{font:700 26px ui-monospace,monospace;color:#796a88}.memory small{font-family:monospace;color:#8d7e9b}.memory h2{margin:7px 0 8px}
-.memory p,.similarCard p,.traits p{line-height:1.75;color:#c4bbc8}.similarCard{padding:28px}.bigquote{font-size:clamp(38px,10vw,70px);font-weight:800;margin-bottom:20px}
+.memory p,.similarCard p,.traits p{line-height:1.75;color:#c4bbc8}.similarCard{padding:28px;position:relative;overflow:hidden}.bigquote{font-size:clamp(38px,10vw,70px);font-weight:800;margin-bottom:20px}.similarCard .softDivider{height:1px;margin:18px 0 22px;background:linear-gradient(90deg,transparent,rgba(181,145,220,.65),transparent);position:relative}.similarCard .softDivider:after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:0 9px;background:#121016;color:#a98ac5;font-size:12px}.similarCard .feathers{position:absolute;right:22px;bottom:14px;font-size:31px;letter-spacing:-12px;transform:rotate(-12deg);opacity:.48;filter:drop-shadow(0 0 8px rgba(175,135,220,.25));pointer-events:none}.similarCard .feathers span:last-child{display:inline-block;transform:rotate(18deg) translateY(4px)}
 .traits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.traits article{padding:20px;border-radius:22px;background:#121016;border:1px solid #2c2532}
 .traits b{font-size:20px}.quiz{padding:25px}.quiz h2{font-size:27px;line-height:1.45}.quiz #answers{display:grid;gap:10px}
 .answer{border:1px solid #39303f;border-radius:17px;padding:15px;background:#17121c;color:#fff;text-align:left}.answer.ok{border-color:#72cb87}.answer.ng{border-color:#d86e7b}
@@ -96,8 +96,10 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
   </div>
   <div class="similarCard card">
     <div class="bigquote">気づいたら同じになってた部分</div>
+    <div class="softDivider"></div>
     <p>二人とも笑う時に「むり」って付けるようになったり、言い方や反応が少しずつ似てきたり。そんなとこが一番好き。</p>
     <p>一緒にいる時間が増えて、こういうどうでもいいところまで似てきたのが、俺はすごく幸せと感じます。</p>
+    <div class="feathers" aria-hidden="true"><span>❧</span><span>❧</span></div>
   </div>
 </section>
 
